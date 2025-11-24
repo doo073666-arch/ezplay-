@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limited Time Offer: Unlock Premium Features for FREE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Variables */
+        :root {
+            --main-bg: #eef1f5; 
+            --card-bg: #ffffff;
+            --cta-color: #007bff; /* Trustworthy Blue */
+            --cta-color-hover: #0056b3;
+            --success-color: #28a745;
+            --text-dark: #212529;
+            --text-light: #6c757d;
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-cta: 0 6px 20px rgba(0, 123, 255, 0.4);
+        }
+
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--main-bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text-dark);
+            text-align: center;
+        }
+
+        .container {
+            max-width: 95%;
+            width: 450px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 35px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        .header-section {
+            margin-bottom: 25px;
+        }
+
+        .header-section .app-icons {
+            margin-bottom: 15px;
+        }
+
+        .header-section .app-icons img {
+            width: 70px;
+            height: 70px;
+            margin: 0 10px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .header-section h1 {
+            color: var(--cta-color);
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+
+        .header-section h2 {
+            font-size: 20px;
+            color: var(--text-dark);
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+        
+        /* Benefits List */
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0 35px;
+            text-align: left;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 25px;
+        }
+
+        .benefits-list li {
+            font-size: 16px;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .benefits-list .icon {
+            color: var(--success-color);
+            font-size: 20px;
+            margin-right: 10px;
+            line-height: 1;
+        }
+        
+        /* Urgency Timer */
+        .timer-section {
+            background-color: #fff3cd; 
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .timer-section p {
+            font-size: 18px;
+            font-weight: 700;
+            color: #856404; 
+            margin: 0;
+        }
+        
+        #countdown {
+            color: #dc3545;
+            font-size: 28px;
+            font-weight: 900;
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* App Display and CTA */
+        .app-display {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .app-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .app-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            margin-bottom: 15px;
+        }
+
+        .cta-button {
+            display: block;
+            padding: 15px 10px;
+            background: var(--cta-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            box-shadow: var(--shadow-cta);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            background: var(--cta-color-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.6);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            text-align: left;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .testimonials p {
+            font-size: 14px;
+            color: var(--text-light);
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
+        .testimonials .highlight {
+            font-weight: bold;
+            color: var(--text-dark);
+            font-size: 16px;
+        }
+
+        .disclaimer {
+            font-size: 12px;
+            color: #aaaaaa;
+            margin-top: 20px;
+        }
+
+        /* Animation for trust signal */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .status-dot {
+            height: 10px;
+            width: 10px;
+            background-color: var(--success-color);
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            animation: pulse 1s infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <div class="header-section">
+            <div class="app-icons">
+                <img src="https://i.postimg.cc/QtQVL8BT/images-(4).jpg" alt="Focus Friend Icon">
+                <img src="https://i.postimg.cc/YCCF1W4p/images-(5).jpg" alt="Focus To-Do Icon">
+            </div>
+
+            <h1>INSTANT ACTIVATION: Get Both Apps **Gold Edition**</h1>
+            <h2>Unlock **ALL Paid Features** for Free Today</h2>
+        </div>
+
+        <div class="timer-section">
+            <p>
+                <span class="status-dot"></span>
+                Offer Available for **78 Users** ONLY Today!
+            </p>
+            <p style="margin-top: 5px;">
+                <span style="font-size: 14px; font-weight: 400;">Promotion Ends In:</span>
+                <span id="countdown">00:30:00</span> </p>
+            </div>
+
+        <ul class="benefits-list">
+            <li><span class="icon">&#10003;</span> **Permanently Remove** All Intrusive Ads</li>
+            <li><span class="icon">&#10003;</span> **Access** All Exclusive Themes, Backgrounds, and Premium Levels</li>
+            <li><span class="icon">&#10003;</span> **Skip** Monthly Subscriptions and Get VIP Updates</li>
+            <li><span class="icon">&#10003;</span> **Lifetime Activation** - No Hidden Costs or Time Limits</li>
+        </ul>
+        
+        <div class="app-display">
+            
+            <div class="app-item">
+                <img src="https://i.postimg.cc/QtQVL8BT/images-(4).jpg" alt="Focus Friend Screenshot">
+                <a 
+                    href="https://installchecker.com/cl/i/423g25" 
+                    target="_blank" 
+                    class="cta-button">
+                    DOWNLOAD & ACTIVATE (App 1)
+                </a>
+            </div>
+
+            <div class="app-item">
+                <img src="https://i.postimg.cc/YCCF1W4p/images-(5).jpg" alt="Focus To-Do Screenshot">
+                <a 
+                    href="https://installchecker.com/cl/i/423g25" 
+                    target="_blank" 
+                    class="cta-button">
+                    DOWNLOAD & ACTIVATE (App 2)
+                </a>
+            </div>
+            
+        </div>
+
+        <div class="testimonials">
+            <p class="highlight">What Users Who Activated Are Saying:</p>
+            <p>
+                ⭐️⭐️⭐️⭐️⭐️ "The activation was instant! I’m using the paid version for free now. Don't miss this!" – <span style="font-weight: bold; color: var(--cta-color);">Sarah A.</span>
+            </p>
+            <p>
+                ⭐️⭐️⭐️⭐️⭐️ "Best deal I've ever seen. No complex steps, just tap, download, and it was activated." – <span style="font-weight: bold; color: var(--cta-color);">John S.</span>
+            </p>
+        </div>
+
+        <p class="disclaimer">
+            *This is a highly limited offer. Please activate immediately before the remaining slots run out.
+        </p>
+
+    </div>
+</div>
+
+<script>
+    function startCountdown(duration, display) {
+        let timer = duration;
+        let countdownInterval = setInterval(function () {
+            let minutes = parseInt(timer / 60, 10);
+            let seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = "00:" + minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                clearInterval(countdownInterval);
+                display.textContent = "00:00:00 - EXPIRED!";
+                // Optional: Disable or change CTA buttons here
+                const ctaButtons = document.querySelectorAll('.cta-button');
+                ctaButtons.forEach(button => {
+                    button.textContent = "OFFER EXPIRED";
+                    button.style.backgroundColor = "#ccc";
+                    button.style.pointerEvents = "none"; // Make it unclickable
+                    button.style.boxShadow = "none";
+                });
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        // Set the duration to 30 minutes (1800 seconds)
+        const thirtyMinutes = 60 * 30; 
+        const display = document.querySelector('#countdown');
+        startCountdown(thirtyMinutes, display);
+    };
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limited Time Offer: Unlock Premium Features for FREE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Variables */
+        :root {
+            --main-bg: #eef1f5; 
+            --card-bg: #ffffff;
+            --cta-color: #007bff; /* Trustworthy Blue */
+            --cta-color-hover: #0056b3;
+            --success-color: #28a745;
+            --text-dark: #212529;
+            --text-light: #6c757d;
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-cta: 0 6px 20px rgba(0, 123, 255, 0.4);
+        }
+
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--main-bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text-dark);
+            text-align: center;
+        }
+
+        .container {
+            max-width: 95%;
+            width: 450px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 35px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        .header-section {
+            margin-bottom: 25px;
+        }
+
+        .header-section .app-icons {
+            margin-bottom: 15px;
+        }
+
+        .header-section .app-icons img {
+            width: 70px;
+            height: 70px;
+            margin: 0 10px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .header-section h1 {
+            color: var(--cta-color);
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+
+        .header-section h2 {
+            font-size: 20px;
+            color: var(--text-dark);
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+        
+        /* Benefits List */
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0 35px;
+            text-align: left;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 25px;
+        }
+
+        .benefits-list li {
+            font-size: 16px;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .benefits-list .icon {
+            color: var(--success-color);
+            font-size: 20px;
+            margin-right: 10px;
+            line-height: 1;
+        }
+        
+        /* Urgency Timer */
+        .timer-section {
+            background-color: #fff3cd; 
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .timer-section p {
+            font-size: 18px;
+            font-weight: 700;
+            color: #856404; 
+            margin: 0;
+        }
+        
+        #countdown {
+            color: #dc3545;
+            font-size: 28px;
+            font-weight: 900;
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* App Display and CTA */
+        .app-display {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .app-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .app-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            margin-bottom: 15px;
+        }
+
+        .cta-button {
+            display: block;
+            padding: 15px 10px;
+            background: var(--cta-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            box-shadow: var(--shadow-cta);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            background: var(--cta-color-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.6);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            text-align: left;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .testimonials p {
+            font-size: 14px;
+            color: var(--text-light);
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
+        .testimonials .highlight {
+            font-weight: bold;
+            color: var(--text-dark);
+            font-size: 16px;
+        }
+
+        .disclaimer {
+            font-size: 12px;
+            color: #aaaaaa;
+            margin-top: 20px;
+        }
+
+        /* Animation for trust signal */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .status-dot {
+            height: 10px;
+            width: 10px;
+            background-color: var(--success-color);
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            animation: pulse 1s infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <div class="header-section">
+            <div class="app-icons">
+                <img src="https://i.postimg.cc/QtQVL8BT/images-(4).jpg" alt="Focus Friend Icon">
+                <img src="https://i.postimg.cc/YCCF1W4p/images-(5).jpg" alt="Focus To-Do Icon">
+            </div>
+
+            <h1>INSTANT ACTIVATION: Get Both Apps **Gold Edition**</h1>
+            <h2>Unlock **ALL Paid Features** for Free Today</h2>
+        </div>
+
+        <div class="timer-section">
+            <p>
+                <span class="status-dot"></span>
+                Offer Available for **78 Users** ONLY Today!
+            </p>
+            <p style="margin-top: 5px;">
+                <span style="font-size: 14px; font-weight: 400;">Promotion Ends In:</span>
+                <span id="countdown">00:30:00</span> </p>
+            </div>
+
+        <ul class="benefits-list">
+            <li><span class="icon">&#10003;</span> **Permanently Remove** All Intrusive Ads</li>
+            <li><span class="icon">&#10003;</span> **Access** All Exclusive Themes, Backgrounds, and Premium Levels</li>
+            <li><span class="icon">&#10003;</span> **Skip** Monthly Subscriptions and Get VIP Updates</li>
+            <li><span class="icon">&#10003;</span> **Lifetime Activation** - No Hidden Costs or Time Limits</li>
+        </ul>
+        
+        <div class="app-display">
+            
+            <div class="app-item">
+                <img src="https://i.postimg.cc/QtQVL8BT/images-(4).jpg" alt="Focus Friend Screenshot">
+                <a 
+                    href="https://installchecker.com/cl/i/423g25" 
+                    target="_blank" 
+                    class="cta-button">
+                    DOWNLOAD & ACTIVATE (App 1)
+                </a>
+            </div>
+
+            <div class="app-item">
+                <img src="https://i.postimg.cc/YCCF1W4p/images-(5).jpg" alt="Focus To-Do Screenshot">
+                <a 
+                    href="https://installchecker.com/cl/i/423g25" 
+                    target="_blank" 
+                    class="cta-button">
+                    DOWNLOAD & ACTIVATE (App 2)
+                </a>
+            </div>
+            
+        </div>
+
+        <div class="testimonials">
+            <p class="highlight">What Users Who Activated Are Saying:</p>
+            <p>
+                ⭐️⭐️⭐️⭐️⭐️ "The activation was instant! I’m using the paid version for free now. Don't miss this!" – <span style="font-weight: bold; color: var(--cta-color);">Sarah A.</span>
+            </p>
+            <p>
+                ⭐️⭐️⭐️⭐️⭐️ "Best deal I've ever seen. No complex steps, just tap, download, and it was activated." – <span style="font-weight: bold; color: var(--cta-color);">John S.</span>
+            </p>
+        </div>
+
+        <p class="disclaimer">
+            *This is a highly limited offer. Please activate immediately before the remaining slots run out.
+        </p>
+
+    </div>
+</div>
+
+<script>
+    function startCountdown(duration, display) {
+        let timer = duration;
+        let countdownInterval = setInterval(function () {
+            let minutes = parseInt(timer / 60, 10);
+            let seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = "00:" + minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                clearInterval(countdownInterval);
+                display.textContent = "00:00:00 - EXPIRED!";
+                // Optional: Disable or change CTA buttons here
+                const ctaButtons = document.querySelectorAll('.cta-button');
+                ctaButtons.forEach(button => {
+                    button.textContent = "OFFER EXPIRED";
+                    button.style.backgroundColor = "#ccc";
+                    button.style.pointerEvents = "none"; // Make it unclickable
+                    button.style.boxShadow = "none";
+                });
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        // Set the duration to 30 minutes (1800 seconds)
+        const thirtyMinutes = 60 * 30; 
+        const display = document.querySelector('#countdown');
+        startCountdown(thirtyMinutes, display);
+    };
+</script>
+
+</body>
+</html>
