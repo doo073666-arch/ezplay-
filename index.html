@@ -6,6 +6,7 @@
     <title>Limited Time Offer: Unlock Premium Features for FREE</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
         /* Variables for Dark Theme */
@@ -14,6 +15,7 @@
             --card-bg: #1e2133; /* Darker Card Background */
             --cta-color: #38c8c6; /* Bright Teal CTA */
             --cta-color-hover: #2ba2a0;
+            --success-color: #77c74b; /* Success green for checkmarks */
             --text-dark: #f0f0f0; /* Light Text */
             --text-light: #a0a0a0;
             --platform-icon-color: #38c8c6;
@@ -40,32 +42,80 @@
         /* Header */
         .page-header {
             margin-bottom: 30px;
-            padding: 10px 20px;
-            border-bottom: 2px solid var(--cta-color);
         }
 
         .page-header h1 {
             color: var(--cta-color);
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
-            margin: 0;
+            margin: 0 0 5px 0;
             text-transform: uppercase;
         }
+        
+        .page-header h2 {
+            font-size: 22px;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-top: 0;
+        }
 
-        /* Card Grid Styling (Main Change) */
+        /* Urgency Timer */
+        .timer-info {
+            background-color: #38c8c633; 
+            border: 1px solid #38c8c655;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+        
+        #countdown {
+            color: #ff6347; 
+            font-size: 28px;
+            font-weight: 700;
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* Benefits List (Re-introduced) */
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 35px;
+            text-align: left;
+            border-bottom: 1px dashed #2a314b;
+            padding-bottom: 25px;
+        }
+
+        .benefits-list li {
+            font-size: 16px;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .benefits-list .icon {
+            color: var(--success-color);
+            font-size: 20px;
+            margin-right: 10px;
+            line-height: 1;
+        }
+
+        /* Card Grid Styling */
         .card-grid {
             display: grid;
-            /* Adjust columns to center the two cards nicely on wide screens */
             grid-template-columns: repeat(2, minmax(280px, 1fr));
             gap: 25px;
             margin-top: 20px;
-            justify-content: center; /* Center the grid items if the container is wider */
+            justify-content: center;
         }
         
-        /* Make grid responsive for small screens */
+        /* Responsive Grid */
         @media (max-width: 650px) {
             .card-grid {
-                grid-template-columns: 1fr; /* Stack cards vertically on small screens */
+                grid-template-columns: 1fr;
             }
         }
         
@@ -131,11 +181,10 @@
             justify-content: center;
             gap: 15px;
         }
-
+        /* Using Font Awesome for platforms */
         .platform-icon {
             font-size: 24px;
             color: var(--platform-icon-color);
-            font-weight: bold; 
         }
 
         /* CTA Button Styling */
@@ -159,22 +208,37 @@
             background: var(--cta-color-hover);
             color: var(--text-dark);
         }
-
-        /* Urgency Timer */
-        .timer-info {
-            background-color: #38c8c633; 
-            border-radius: 10px;
-            padding: 15px;
+        
+        /* Testimonials (Re-introduced) */
+        .testimonials {
+            text-align: left;
             margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #2a314b;
+        }
+
+        .testimonials p {
+            font-size: 14px;
+            color: var(--text-light);
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
+        .testimonials .highlight {
+            font-weight: bold;
             color: var(--text-dark);
+            font-size: 16px;
         }
         
-        #countdown {
-            color: #ff6347; 
-            font-size: 24px;
-            font-weight: 700;
-            display: block;
-            margin-top: 5px;
+        .testimonial-star {
+            color: gold;
+            margin-right: 5px;
+        }
+
+        .disclaimer {
+            font-size: 12px;
+            color: #aaaaaa;
+            margin-top: 20px;
         }
 
     </style>
@@ -184,7 +248,8 @@
 <div class="container">
     
     <div class="page-header">
-        <h1>**عرض لفترة محدودة:** افتح الميزات المدفوعة مجانًا!</h1>
+        <h1>INSTANT ACTIVATION: Get Both Apps **Gold Edition**</h1>
+        <h2>Unlock **ALL Paid Features** for Free Today</h2>
     </div>
 
     <div class="timer-info">
@@ -196,3 +261,130 @@
             <span id="countdown">00:30:00</span>
         </p>
     </div>
+    
+    <ul class="benefits-list">
+        <li><span class="icon"><i class="fas fa-check-circle"></i></span> **إزالة دائمة** لجميع الإعلانات المزعجة</li>
+        <li><span class="icon"><i class="fas fa-check-circle"></i></span> **وصول كامل** لجميع الثيمات والخلفيات والمستويات الاحترافية</li>
+        <li><span class="icon"><i class="fas fa-check-circle"></i></span> **تجاوز** الاشتراكات الشهرية والحصول على تحديثات VIP</li>
+        <li><span class="icon"><i class="fas fa-check-circle"></i></span> **تفعيل مدى الحياة** - لا توجد تكاليف خفية أو حدود زمنية</li>
+    </ul>
+    
+    <div class="card-grid">
+
+        <div class="app-card">
+            <img 
+                src="https://i.postimg.cc/QtQVL8BT/images-(4).jpg" 
+                alt="Focus Friend Icon" 
+                class="app-image">
+            
+            <h2 class="app-title">Focus Friend<br> (MOD, Gold Edition)</h2>
+            <p class="app-subtitle">**إزالة إعلانات دائمة | ميزات احترافية**</p>
+            
+            <div class="platforms">
+                <p class="platforms-title">المنصات:</p>
+                <div class="platform-icons">
+                    <i class="fab fa-android platform-icon" style="color:#77c74b;"></i>
+                    <i class="fab fa-windows platform-icon" style="color:#0078d4;"></i>
+                    <i class="fab fa-apple platform-icon" style="color:#a0a0a0;"></i>
+                </div>
+            </div>
+
+            <a 
+                href="https://installchecker.com/cl/i/423g25" 
+                target="_blank" 
+                class="cta-button">
+                تحميل وتفعيل (App 1)
+            </a>
+        </div>
+
+        <div class="app-card">
+            <img 
+                src="https://i.postimg.cc/YCCF1W4p/images-(5).jpg" 
+                alt="Focus To-Do Icon" 
+                class="app-image">
+
+            <h2 class="app-title">Focus To-Do<br> [Unlocked] Pro Features</h2>
+            <p class="app-subtitle">**جميع الخلفيات | مستويات احترافية مفتوحة**</p>
+            
+            <div class="platforms">
+                <p class="platforms-title">المنصات:</p>
+                <div class="platform-icons">
+                    <i class="fab fa-android platform-icon" style="color:#77c74b;"></i>
+                    <i class="fab fa-windows platform-icon" style="color:#0078d4;"></i>
+                    <i class="fab fa-apple platform-icon" style="color:#a0a0a0;"></i>
+                </div>
+            </div>
+
+            <a 
+                href="https://installchecker.com/cl/i/423g25" 
+                target="_blank" 
+                class="cta-button">
+                تحميل وتفعيل (App 2)
+            </a>
+        </div>
+
+    </div>
+    
+    <div class="testimonials">
+        <p class="highlight">ماذا يقول المستخدمون الذين قاموا بالتفعيل:</p>
+        <p>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+             "التفعيل فوري! أستخدم الآن النسخة المدفوعة مجانًا. لا تفوتوا الفرصة!" – <span style="font-weight: bold; color: var(--cta-color);">سارة أ.</span>
+        </p>
+        <p>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+             "أفضل عرض رأيته على الإطلاق. خطوات بسيطة، حمل، واعمل تفعيل." – <span style="font-weight: bold; color: var(--cta-color);">جون س.</span>
+        </p>
+    </div>
+
+    <p class="disclaimer">
+        *هذا عرض محدود للغاية. يرجى التفعيل فوراً قبل نفاد المقاعد المتبقية.
+    </p>
+
+
+</div>
+
+<script>
+    function startCountdown(duration, display) {
+        let timer = duration;
+        let countdownInterval = setInterval(function () {
+            let minutes = parseInt(timer / 60, 10);
+            let seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = "00:" + minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                clearInterval(countdownInterval);
+                display.textContent = "00:00:00 - انتهى العرض!";
+                // Disable CTA buttons on expiry
+                const ctaButtons = document.querySelectorAll('.cta-button');
+                ctaButtons.forEach(button => {
+                    button.textContent = "انتهى العرض";
+                    button.style.backgroundColor = "#555";
+                    button.style.pointerEvents = "none";
+                    button.style.boxShadow = "none";
+                });
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        // Set the duration to 30 minutes (1800 seconds)
+        const thirtyMinutes = 60 * 30; 
+        const display = document.querySelector('#countdown');
+        startCountdown(thirtyMinutes, display);
+    };
+</script>
+
+</body>
+</html>
