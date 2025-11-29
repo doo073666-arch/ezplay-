@@ -270,4 +270,121 @@
     
     <div class="card-grid">
 
-        
+        <div class="app-card">
+            <img 
+                src="https://i.postimg.cc/QtQVL8BT/images-(4).jpg" 
+                alt="Focus Friend Icon" 
+                class="app-image">
+            
+            <h2 class="app-title">Focus Friend<br> (MOD, Gold Edition)</h2>
+            <p class="app-subtitle">**Permanent Ad Removal | Pro Features**</p>
+            
+            <div class="platforms">
+                <p class="platforms-title">Platforms:</p>
+                <div class="platform-icons">
+                    <i class="fab fa-android platform-icon" style="color:#77c74b;"></i>
+                    <i class="fab fa-windows platform-icon" style="color:#0078d4;"></i>
+                    <i class="fab fa-apple platform-icon" style="color:#a0a0a0;"></i>
+                </div>
+            </div>
+
+            <a 
+                href="https://installchecker.com/cl/i/423g25" 
+                target="_blank" 
+                class="cta-button">
+                DOWNLOAD & ACTIVATE (App 1)
+            </a>
+        </div>
+
+        <div class="app-card">
+            <img 
+                src="https://i.postimg.cc/YCCF1W4p/images-(5).jpg" 
+                alt="Focus To-Do Icon" 
+                class="app-image">
+
+            <h2 class="app-title">Focus To-Do<br> [Unlocked] Pro Features</h2>
+            <p class="app-subtitle">**All Backgrounds | Unlocked Pro Levels**</p>
+            
+            <div class="platforms">
+                <p class="platforms-title">Platforms:</p>
+                <div class="platform-icons">
+                    <i class="fab fa-android platform-icon" style="color:#77c74b;"></i>
+                    <i class="fab fa-windows platform-icon" style="color:#0078d4;"></i>
+                    <i class="fab fa-apple platform-icon" style="color:#a0a0a0;"></i>
+                </div>
+            </div>
+
+            <a 
+                href="https://installchecker.com/cl/i/423g25" 
+                target="_blank" 
+                class="cta-button">
+                DOWNLOAD & ACTIVATE (App 2)
+            </a>
+        </div>
+
+    </div>
+    
+    <div class="testimonials">
+        <p class="highlight">What Users Who Activated Are Saying:</p>
+        <p>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+             "The activation was instant! I’m using the paid version for free now. Don't miss this!" – <span style="font-weight: bold; color: var(--cta-color);">Sarah A.</span>
+        </p>
+        <p>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+            <span class="testimonial-star"><i class="fas fa-star"></i></span>
+             "Best deal I've ever seen. No complex steps, just tap, download, and activate." – <span style="font-weight: bold; color: var(--cta-color);">John S.</span>
+        </p>
+    </div>
+
+    <p class="disclaimer">
+        *This is a highly limited offer. Please activate immediately before the remaining slots run out.
+    </p>
+
+
+</div>
+
+<script>
+    function startCountdown(duration, display) {
+        let timer = duration;
+        let countdownInterval = setInterval(function () {
+            let minutes = parseInt(timer / 60, 10);
+            let seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = "00:" + minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                clearInterval(countdownInterval);
+                display.textContent = "00:00:00 - EXPIRED!";
+                // Disable CTA buttons on expiry
+                const ctaButtons = document.querySelectorAll('.cta-button');
+                ctaButtons.forEach(button => {
+                    button.textContent = "OFFER EXPIRED";
+                    button.style.backgroundColor = "#555";
+                    button.style.pointerEvents = "none";
+                    button.style.boxShadow = "none";
+                });
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        // Set the duration to 30 minutes (1800 seconds)
+        const thirtyMinutes = 60 * 30; 
+        const display = document.querySelector('#countdown');
+        startCountdown(thirtyMinutes, display);
+    };
+</script>
+
+</body>
+</html>
