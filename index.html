@@ -1,390 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Limited Time Offer: Unlock Premium Features for FREE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <title>Viking Saga: Dragonborn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* Variables for Dark Theme */
         :root {
-            --main-bg: #141724; 
-            --card-bg: #1e2133; 
-            --cta-color: #38c8c6; 
-            --cta-color-hover: #2ba2a0;
-            --success-color: #77c74b; 
-            --text-dark: #f0f0f0; 
-            --text-light: #a0a0a0;
-            --platform-icon-color: #38c8c6;
-            --shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --primary-color: #0A192F;
+            --secondary-color: #122238;
+            --accent-color: #64FFDA;
+            --text-color: #CCD6F6;
+            --light-text: #8892B0;
         }
 
-        /* General Styling */
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--main-bg);
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-color);
             margin: 0;
-            padding: 20px 0;
-            color: var(--text-dark);
-            text-align: center;
-        }
-
-        .container {
-            max-width: 900px;
-            width: 95%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Header */
-        .page-header {
-            margin-bottom: 30px;
-        }
-
-        .page-header h1 {
-            color: var(--cta-color);
-            font-size: 32px;
-            font-weight: 700;
-            margin: 0 0 5px 0;
-            text-transform: uppercase;
-        }
-        
-        .page-header h2 {
-            font-size: 22px;
-            color: var(--text-dark);
-            font-weight: 600;
-            margin-top: 0;
-        }
-
-        /* Urgency Timer */
-        .timer-info {
-            background-color: #38c8c633; 
-            border: 1px solid #38c8c655;
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 30px;
-            color: var(--text-dark);
-        }
-        
-        #countdown {
-            color: #ff6347; 
-            font-size: 28px;
-            font-weight: 700;
-            display: block;
-            margin-top: 5px;
-        }
-
-        /* Benefits List */
-        .benefits-list {
-            list-style: none;
             padding: 0;
-            margin: 0 0 35px;
-            text-align: left;
-            border-bottom: 1px dashed #2a314b;
-            padding-bottom: 25px;
-        }
-
-        .benefits-list li {
-            font-size: 16px;
-            color: var(--text-dark);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            font-weight: 500;
-        }
-
-        .benefits-list .icon {
-            color: var(--success-color);
-            font-size: 20px;
-            margin-right: 10px;
-            line-height: 1;
-        }
-
-        /* Card Grid Styling */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-            justify-content: center;
-        }
-        
-        @media (max-width: 650px) {
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .app-card {
-            background-color: var(--card-bg);
-            padding: 15px;
-            border-radius: 18px;
-            box-shadow: var(--shadow-dark);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .app-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .app-image {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .app-title {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin: 0 0 5px 0;
-            min-height: 50px; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            line-height: 1.3;
-        }
-
-        .app-subtitle {
-            font-size: 14px;
-            color: var(--text-light);
-            margin: 0 0 15px 0;
-        }
-
-        /* Platforms Section */
-        .platforms {
-            margin: 15px 0;
-            padding-top: 10px;
-            border-top: 1px dashed #2a314b;
-        }
-
-        .platforms-title {
-            font-size: 14px;
-            color: var(--text-light);
-            margin-bottom: 10px;
-            font-weight: 400;
-        }
-
-        .platform-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        
-        .platform-icon {
-            font-size: 24px;
-            color: var(--platform-icon-color);
-        }
-
-        /* CTA Button Styling */
-        .cta-button {
-            display: block;
-            width: 100%;
-            padding: 15px 10px;
-            background: var(--cta-color);
-            color: var(--main-bg); 
-            text-decoration: none;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            box-shadow: var(--shadow-dark);
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            margin-top: auto; 
-        }
-
-        .cta-button:hover {
-            background: var(--cta-color-hover);
-            color: var(--text-dark);
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            text-align: left;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #2a314b;
-        }
-
-        .testimonials p {
-            font-size: 14px;
-            color: var(--text-light);
-            margin: 5px 0;
+            direction: ltr;
             line-height: 1.6;
         }
 
-        .testimonials .highlight {
-            font-weight: bold;
-            color: var(--text-dark);
-            font-size: 16px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
         
-        .testimonial-star {
-            color: gold;
+        /* Header & Main Section */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        /* Main Content with split layout */
+        .main-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 50px;
+            margin-top: 50px;
+            padding: 40px;
+            background-color: var(--secondary-color);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .text-container {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .game-title {
+            font-size: 44px;
+            color: var(--text-color);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .game-subtitle {
+            font-size: 20px;
+            color: var(--light-text);
+            margin-bottom: 25px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: #7affc8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(100, 255, 218, 0.6);
+        }
+
+        /* Features Section */
+        .features-section {
+            margin-top: 60px;
+        }
+
+        .features-section h2 {
+            text-align: center;
+            font-size: 32px;
+            color: var(--text-color);
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            background-color: var(--secondary-color);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            color: var(--accent-color);
+            margin-top: 15px;
+        }
+
+        .feature-item p {
+            color: var(--light-text);
+            font-size: 15px;
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: var(--accent-color);
+        }
+        
+        /* Stats section */
+        .stats-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .stat-item .icon {
+            font-size: 24px;
             margin-right: 5px;
         }
+        
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+                padding: 20px;
+            }
+            
+            .text-container {
+                padding: 0;
+            }
+            
+            .game-title {
+                font-size: 36px;
+            }
+            
+            .game-subtitle {
+                font-size: 18px;
+            }
 
-        .disclaimer {
-            font-size: 12px;
-            color: #aaaaaa;
-            margin-top: 20px;
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
         }
-
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <div class="logo">Games4You</div>
+        </header>
 
-<div class="container">
-    
-    <div class="page-header">
-        <h1>INSTANT ACTIVATION: Get Both Apps **Gold Edition**</h1>
-        <h2>Unlock **ALL Paid Features** for Free Today</h2>
-    </div>
-
-    <div class="timer-info">
-        <p>
-            <span style="font-weight: bold;">⚠️ ATTENTION! </span> Offer Available for **78 Users** ONLY Today!
-        </p>
-        <p style="margin-top: 5px;">
-            <span style="font-size: 14px; font-weight: 400;">Promotion Ends In:</span>
-            <span id="countdown">00:30:00</span>
-        </p>
-    </div>
-    
-    <ul class="benefits-list">
-        <li><span class="icon"><i class="fas fa-check-circle"></i></span> **Permanently Remove** All Intrusive Ads</li>
-        <li><span class="icon"><i class="fas fa-check-circle"></i></span> **Access** All Exclusive Themes, Backgrounds, and Premium Levels</li>
-        <li><span class="icon"><i class="fas fa-check-circle"></i></span> **Skip** Monthly Subscriptions and Get VIP Updates</li>
-        <li><span class="icon"><i class="fas fa-check-circle"></i></span> **Lifetime Activation** - No Hidden Costs or Time Limits</li>
-    </ul>
-    
-    <div class="card-grid">
-
-        <div class="app-card">
-            <img 
-                src="https://i.postimg.cc/QtQVL8BT/images-(4).jpg" 
-                alt="Focus Friend Icon" 
-                class="app-image">
-            
-            <h2 class="app-title">Focus Friend<br> (MOD, Gold Edition)</h2>
-            <p class="app-subtitle">**Permanent Ad Removal | Pro Features**</p>
-            
-            <div class="platforms">
-                <p class="platforms-title">Platforms:</p>
-                <div class="platform-icons">
-                    <i class="fab fa-android platform-icon" style="color:#77c74b;"></i>
-                    <i class="fab fa-windows platform-icon" style="color:#0078d4;"></i>
-                    <i class="fab fa-apple platform-icon" style="color:#a0a0a0;"></i>
+        <main>
+            <section class="main-content">
+                <div class="image-container">
+                    <img src="https://i.postimg.cc/SNW3jVCh/e2-Pl4g-ZB-400x400.jpg" alt="Viking Saga: Dragonborn Game Cover">
                 </div>
-            </div>
+                <div class="text-container">
+                    <h1 class="game-title">Blox Fruits</h1>
+                    <p class="game-subtitle">What's special about this version of Blox Fruits:</p>
+                    <p>
+                        Auto Farm: This feature allows your character to automatically collect fruits and items, so you don’t have to spend hours doing it yourself.
 
-            <a 
-                href="https://installchecker.com/cl/i/423g25" 
-                target="_blank" 
-                class="cta-button">
-                DOWNLOAD & ACTIVATE (App 1)
-            </a>
-        </div>
+Auto Raid: Lets you join raids and defeat bosses without having to control every move—like having a team of helpers!
 
-        <div class="app-card">
-            <img 
-                src="https://i.postimg.cc/YCCF1W4p/images-(5).jpg" 
-                alt="Focus To-Do Icon" 
-                class="app-image">
+Race V4: Helps you progress through the game faster, reaching new levels and islands in no time.
 
-            <h2 class="app-title">Focus To-Do<br> [Unlocked] Pro Features</h2>
-            <p class="app-subtitle">**All Backgrounds | Unlocked Pro Levels**</p>
-            
-            <div class="platforms">
-                <p class="platforms-title">Platforms:</p>
-                <div class="platform-icons">
-                    <i class="fab fa-android platform-icon" style="color:#77c74b;"></i>
-                    <i class="fab fa-windows platform-icon" style="color:#0078d4;"></i>
-                    <i class="fab fa-apple platform-icon" style="color:#a0a0a0;"></i>
+PVP (Player vs. Player): Want to battle other players? This script gives you an advantage, helping you win more fights.
+
+Smooth Gameplay: Ensures the game runs smoothly without lags or interruptions.
+                    </p>
+                    <a href="https://lockedapp.store/cl/i/qnn1p4" class="cta-button">Install Now</a>
+				
+                   
+                    <div class="stats-section">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <i class="fab fa-android icon" style="color: #3DDC84;"></i>
+                                Android
+                            </div>
+                            <div class="stat-item">
+                                <i class="fab fa-apple icon" style="color: #BDBDBD;"></i>
+                                iOS
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-star icon" style="color: #FFD700;"></i>
+                                8.5 / 10
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <a 
-                href="https://installchecker.com/cl/i/423g25" 
-                target="_blank" 
-                class="cta-button">
-                DOWNLOAD & ACTIVATE (App 2)
-            </a>
-        </div>
-
+            </section>
+            
+            <section class="features-section">
+                <h2>Why Play This Game?</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt feature-icon"></i>
+                        <h3>Secure & Safe</h3>
+                        <p>Enjoy a secure and risk-free gaming experience.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-gift feature-icon"></i>
+                        <h3>Exclusive Rewards</h3>
+                        <p>Get special gifts and bonuses you won't find anywhere else.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-tachometer-alt feature-icon"></i>
+                        <h3>Smooth Performance</h3>
+                        <p>Experience fast and seamless gameplay on your device.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-    
-    <div class="testimonials">
-        <p class="highlight">What Users Who Activated Are Saying:</p>
-        <p>
-            <span class="testimonial-star"><i class="fas fa-star"></i></span>
-            <span class="testimonial-star"><i class="fas fa-star"></i></span>
-            <span class="testimonial-star"><i class="fas fa-star"></i></span>
-            <span class="testimonial-star"><i class="fas fa-star"></i></span>
-            <span class="testimonial-star"><i class="fas fa-star"></i></span>
-             "The activation was instant! I’m using the paid version for free now. Don't miss this!" – <span style="font-weight: bold; color: var(--cta-color);">Sarah A.</span>
-        </p>
-        <p>
-            <span class="testimonial-star"><i class="fas fa-star"></i></span>
-            <span class="testimonial-star"><i class="fas fa-star"></i></span>
-            <span class="testimonial-star"><i class="fas fa-star"></i></span>
-            <span class="testimonial-star"><i class="fas fa-star"></i></span>
-            <span class="testimonial-star"><i class="fas fa-star"></i></span>
-             "Best deal I've ever seen. No complex steps, just tap, download, and activate." – <span style="font-weight: bold; color: var(--cta-color);">John S.</span>
-        </p>
-    </div>
-
-    <p class="disclaimer">
-        *This is a highly limited offer. Please activate immediately before the remaining slots run out.
-    </p>
-
-
-</div>
-
-<script>
-    function startCountdown(duration, display) {
-        let timer = duration;
-        let countdownInterval = setInterval(function () {
-            let minutes = parseInt(timer / 60, 10);
-            let seconds = parseInt(timer % 60, 10);
-
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-
-            display.textContent = "00:" + minutes + ":" + seconds;
-
-            if (--timer < 0) {
-                clearInterval(countdownInterval);
-                display.textContent = "00:00:00 - EXPIRED!";
-                // Disable CTA buttons on expiry
-                const ctaButtons = document.querySelectorAll('.cta-button');
-                ctaButtons.forEach(button => {
-                    button.textContent = "OFFER EXPIRED";
-                    button.style.backgroundColor = "#555";
-                    button.style.pointerEvents = "none";
-                    button.style.boxShadow = "none";
-                });
-            }
-        }, 1000);
-    }
-
-    window.onload = function () {
-        // Set the duration to 30 minutes (1800 seconds)
-        const thirtyMinutes = 60 * 30; 
-        const display = document.querySelector('#countdown');
-        startCountdown(thirtyMinutes, display);
-    };
-</script>
-
 </body>
 </html>
